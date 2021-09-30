@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dana M. Cruz Paulino\\Desktop\\Apec\\Noveno cuatrimetre\\Integracion open source\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj": {}
+    "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dana M. Cruz Paulino\\Desktop\\Apec\\Noveno cuatrimetre\\Integracion open source\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj": {
+    "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dana M. Cruz Paulino\\Desktop\\Apec\\Noveno cuatrimetre\\Integracion open source\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj",
+        "projectUniqueName": "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj",
         "projectName": "WinFormsApp12",
-        "projectPath": "C:\\Users\\Dana M. Cruz Paulino\\Desktop\\Apec\\Noveno cuatrimetre\\Integracion open source\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj",
-        "packagesPath": "C:\\Users\\Dana M. Cruz Paulino\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dana M. Cruz Paulino\\Desktop\\Apec\\Noveno cuatrimetre\\Integracion open source\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\obj\\",
+        "projectPath": "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj",
+        "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dana M. Cruz Paulino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

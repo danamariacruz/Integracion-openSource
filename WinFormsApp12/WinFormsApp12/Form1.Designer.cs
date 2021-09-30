@@ -58,6 +58,7 @@ namespace WinFormsApp12
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -247,14 +248,14 @@ namespace WinFormsApp12
             // 
             // montoTotal
             // 
-            this.montoTotal.Location = new System.Drawing.Point(400, 333);
+            this.montoTotal.Location = new System.Drawing.Point(626, 141);
             this.montoTotal.Name = "montoTotal";
             this.montoTotal.Size = new System.Drawing.Size(100, 23);
             this.montoTotal.TabIndex = 28;
             // 
             // cantRegistros
             // 
-            this.cantRegistros.Location = new System.Drawing.Point(138, 364);
+            this.cantRegistros.Location = new System.Drawing.Point(448, 336);
             this.cantRegistros.Name = "cantRegistros";
             this.cantRegistros.Size = new System.Drawing.Size(100, 23);
             this.cantRegistros.TabIndex = 27;
@@ -278,7 +279,7 @@ namespace WinFormsApp12
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(323, 336);
+            this.label15.Location = new System.Drawing.Point(503, 147);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 15);
             this.label15.TabIndex = 24;
@@ -287,7 +288,7 @@ namespace WinFormsApp12
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 364);
+            this.label16.Location = new System.Drawing.Point(323, 341);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(119, 15);
             this.label16.TabIndex = 23;
@@ -296,7 +297,7 @@ namespace WinFormsApp12
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(638, 412);
+            this.btnEnviar.Location = new System.Drawing.Point(651, 337);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 29;
@@ -304,11 +305,22 @@ namespace WinFormsApp12
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 24);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Form Lectura";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 447);
+            this.ClientSize = new System.Drawing.Size(751, 367);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.montoTotal);
             this.Controls.Add(this.cantRegistros);
@@ -377,6 +389,7 @@ namespace WinFormsApp12
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

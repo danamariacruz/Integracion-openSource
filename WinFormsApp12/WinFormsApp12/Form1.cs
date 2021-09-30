@@ -30,7 +30,7 @@ namespace WinFormsApp12
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            var path = @"C:\Users\Dana M. Cruz Paulino\Desktop\Apec\Noveno cuatrimetre\Integracion open source\ejemplo.txt";
+            var path = @"C:/Integracion open source/ejemplo.txt";
 
             List<string> formulario = new List<string>();
 
@@ -39,11 +39,11 @@ namespace WinFormsApp12
             formulario.Add(fechaTransaccion.Text);
             formulario.Add(cuentaBeneficiario.Text);
             formulario.Add(tipoMoneda.Text);
+            formulario.Add(montoTotal.Text);
             formulario.Add(tipoRegistroD.Text);
             formulario.Add(cuentaEmpleado.Text);
             formulario.Add(cedula.Text);
             formulario.Add(monto.Text);
-            formulario.Add(montoTotal.Text);
             formulario.Add(tipoRegistroS.Text);
             formulario.Add(cantRegistros.Text);
 
@@ -54,8 +54,15 @@ namespace WinFormsApp12
                     {
                         fs.WriteLine(item.ToString());
                     }
-                   
+
+                    MessageBox.Show("Archivo generado exitosamente en: " + path.ToString());
                 }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmLectura frml = new FrmLectura();
+            frml.Show();
         }
     }
 }

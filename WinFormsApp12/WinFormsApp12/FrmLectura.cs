@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using WinFormsApp12.Model;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace WinFormsApp12
 {
@@ -18,38 +21,36 @@ namespace WinFormsApp12
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var path = @"C:/Integracion open source/ejemplo.txt";
-
-            List<string> formulario = new List<string>();
+            var path = @"C:/Integracion open source/ejemplo.json";
+            List<string> input = new List<string>();
 
             if (!File.Exists(path))
             {
                 MessageBox.Show("Archivo no encontrado, favor de colocar el archivo en la ubicacion especifica " + path.ToString());
             }
 
-            try{
+            try
+            {
                 using (StreamReader sr = new StreamReader(path))
                 {
                     while (sr.Peek() >= 0)
                     {
-                        formulario.Add(sr.ReadLine());
+                        input.Add(sr.ReadLine());
                     }
                 }
 
-                MessageBox.Show("Archivo cargado exitosamente");
+                Formulario formulario = JsonConvert.DeserializeObject<Formulario>(input[0].ToString());
 
-                tipoRegistro.Text = formulario[0].ToString();
-                rnc.Text = formulario[1].ToString();
-                fechaTransaccion.Text = formulario[2].ToString();
-                cuentaBeneficiario.Text = formulario[3].ToString();
-                tipoMoneda.Text = formulario[4].ToString();
-                montoTotal.Text = formulario[5].ToString();
-                tipoRegistroD.Text = formulario[6].ToString();
-                cuentaEmpleado.Text = formulario[7].ToString();
-                cedula.Text = formulario[8].ToString();
-                monto.Text = formulario[9].ToString();
-                tipoRegistroS.Text = formulario[10].ToString();
-                cantRegistros.Text = formulario[11].ToString();
+                rnc.Text = formulario.RNC.ToString();
+                cuentaBeneficiario.Text = formulario.CuentaEncabezado.ToString();
+                tipoMoneda.Text = formulario.TipoMoneda.ToString();
+                montoTotal.Text = formulario.MontoTotal.ToString();
+                dtpFechaRegistro.Value = formulario.FechaRegistro;
+                cantRegistros.Text = formulario.TotalRegistros.ToString();
+                //Desde aqui se deben coger los datos de la lista y pasarlas al datagridview, otra vez, no se como, seguro que con un while XD
+                CedulaEmpleado.Text = formulario.detalles[0].Cedula.ToString();
+                cuentaEmpleado.Text = formulario.detalles[0].CuentaDetalle.ToString();
+                MontoEmpleado.Text = formulario.detalles[0].Monto.ToString();
 
             }
             catch (FileNotFoundException ex){

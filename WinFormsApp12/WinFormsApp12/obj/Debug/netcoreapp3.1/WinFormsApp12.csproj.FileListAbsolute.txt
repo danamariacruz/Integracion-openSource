@@ -31,3 +31,5 @@ C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12
 C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12\WinFormsApp12\obj\Debug\netcoreapp3.1\WinFormsApp12.pdb
 C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12\WinFormsApp12\obj\Debug\netcoreapp3.1\WinFormsApp12.genruntimeconfig.cache
 C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12\WinFormsApp12\obj\Debug\netcoreapp3.1\WinFormsApp12.FrmLectura.resources
+C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12\WinFormsApp12\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Familia\Source\Repos\danamariacruz\Integracion-openSource\WinFormsApp12\WinFormsApp12\obj\Debug\netcoreapp3.1\WinFormsApp12.csproj.CopyComplete

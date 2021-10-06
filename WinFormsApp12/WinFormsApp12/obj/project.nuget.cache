@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c9WD//yVp+sV3GWWw5h2J8BGaIbkbnSqIOATw2e5SBQYPMUrVrFrHKXU3JDQiGszpFUJEvhtIN4OqW8Ytpp8vw==",
+  "dgSpecHash": "6o8ytDoHpAO2fS/KOYuwj9rVLUK+H8BlebHC9/ifD3HdODyv8EdsVsdLT6cFjLTGBR8vrRxFGFqfQlsDl9W/JQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Familia\\Source\\Repos\\danamariacruz\\Integracion-openSource\\WinFormsApp12\\WinFormsApp12\\WinFormsApp12.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Familia\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WinFormsApp12.Model;
+using Newtonsoft.Json;
 
 namespace WinFormsApp12
 {
@@ -30,33 +32,36 @@ namespace WinFormsApp12
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            var path = @"C:/Integracion open source/ejemplo.txt";
+            var path = @"C:/Integracion open source/ejemplo.json";
 
-            List<string> formulario = new List<string>();
+            Formulario formulario = new Formulario();
+            formulario.RNC = int.Parse(rnc.Text);
+            formulario.CuentaEncabezado = int.Parse(cuentaBeneficiario.Text);
+            formulario.TipoMoneda = tipoMoneda.Text;
+            formulario.FechaRegistro = dtpFechaRegistro.Value.Date;
+            formulario.MontoTotal = int.Parse(montoTotal.Text);
+            formulario.TotalRegistros = int.Parse(cantRegistros.Text);
+            //Esto hay que sacarlo del datagridview y no se, hacer un while para que agrege cada registro
+            formulario.detalles = new List<Detalle> {
+                new Detalle {Cedula = int.Parse(cedula.Text), CuentaDetalle = int.Parse(cuentaEmpleado.Text), Monto = int.Parse(monto.Text)},
+            };
 
-            formulario.Add(tipoRegistro.Text);
-            formulario.Add(rnc.Text);
-            formulario.Add(fechaTransaccion.Text);
-            formulario.Add(cuentaBeneficiario.Text);
-            formulario.Add(tipoMoneda.Text);
-            formulario.Add(montoTotal.Text);
-            formulario.Add(tipoRegistroD.Text);
-            formulario.Add(cuentaEmpleado.Text);
-            formulario.Add(cedula.Text);
-            formulario.Add(monto.Text);
-            formulario.Add(tipoRegistroS.Text);
-            formulario.Add(cantRegistros.Text);
+            string output = JsonConvert.SerializeObject(formulario);
 
-            
+            try
+            {
                 using (TextWriter fs = File.CreateText(path))
                 {
-                    foreach (var item in formulario)
-                    {
-                        fs.WriteLine(item.ToString());
-                    }
-
+                    fs.WriteLine(output);
                     MessageBox.Show("Archivo generado exitosamente en: " + path.ToString());
                 }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

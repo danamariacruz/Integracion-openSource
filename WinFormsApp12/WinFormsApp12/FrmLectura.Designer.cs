@@ -45,15 +45,6 @@ namespace WinFormsApp12
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cuentaEmpleado = new System.Windows.Forms.TextBox();
-            this.MontoEmpleado = new System.Windows.Forms.TextBox();
-            this.CedulaEmpleado = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -197,92 +188,17 @@ namespace WinFormsApp12
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cedula,
-            this.Cuenta,
-            this.Monto});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 204);
+            this.dataGridView1.Location = new System.Drawing.Point(65, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(606, 137);
             this.dataGridView1.TabIndex = 58;
             // 
-            // Cedula
-            // 
-            this.Cedula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cedula.HeaderText = "Cedula";
-            this.Cedula.Name = "Cedula";
-            this.Cedula.ReadOnly = true;
-            // 
-            // Cuenta
-            // 
-            this.Cuenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Cuenta.HeaderText = "Cuenta";
-            this.Cuenta.Name = "Cuenta";
-            this.Cuenta.ReadOnly = true;
-            // 
-            // Monto
-            // 
-            this.Monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(266, 176);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 15);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Cuenta";
-            // 
-            // cuentaEmpleado
-            // 
-            this.cuentaEmpleado.Enabled = false;
-            this.cuentaEmpleado.Location = new System.Drawing.Point(317, 172);
-            this.cuentaEmpleado.Name = "cuentaEmpleado";
-            this.cuentaEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.cuentaEmpleado.TabIndex = 63;
-            // 
-            // MontoEmpleado
-            // 
-            this.MontoEmpleado.Enabled = false;
-            this.MontoEmpleado.Location = new System.Drawing.Point(474, 172);
-            this.MontoEmpleado.Name = "MontoEmpleado";
-            this.MontoEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.MontoEmpleado.TabIndex = 62;
-            // 
-            // CedulaEmpleado
-            // 
-            this.CedulaEmpleado.Enabled = false;
-            this.CedulaEmpleado.Location = new System.Drawing.Point(160, 173);
-            this.CedulaEmpleado.Name = "CedulaEmpleado";
-            this.CedulaEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.CedulaEmpleado.TabIndex = 61;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(423, 176);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 15);
-            this.label11.TabIndex = 60;
-            this.label11.Text = "Monto";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Cédula";
-            // 
             // dtpFechaRegistro
             // 
             this.dtpFechaRegistro.Checked = false;
+            this.dtpFechaRegistro.Enabled = false;
             this.dtpFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaRegistro.Location = new System.Drawing.Point(611, 95);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
@@ -293,14 +209,8 @@ namespace WinFormsApp12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 353);
+            this.ClientSize = new System.Drawing.Size(722, 353);
             this.Controls.Add(this.dtpFechaRegistro);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.cuentaEmpleado);
-            this.Controls.Add(this.MontoEmpleado);
-            this.Controls.Add(this.CedulaEmpleado);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.montoTotal);
@@ -318,7 +228,7 @@ namespace WinFormsApp12
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmLectura";
-            this.Text = "FrmLectura";
+            this.Text = "Lectura Archivo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,15 +253,6 @@ namespace WinFormsApp12
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cuentaEmpleado;
-        private System.Windows.Forms.TextBox MontoEmpleado;
-        private System.Windows.Forms.TextBox CedulaEmpleado;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
     }
 }

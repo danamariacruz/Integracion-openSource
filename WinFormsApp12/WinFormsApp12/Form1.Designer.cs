@@ -35,12 +35,6 @@ namespace WinFormsApp12
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cedula = new System.Windows.Forms.TextBox();
-            this.monto = new System.Windows.Forms.TextBox();
-            this.cuentaEmpleado = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.montoTotal = new System.Windows.Forms.TextBox();
             this.cantRegistros = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -54,13 +48,13 @@ namespace WinFormsApp12
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAgregarCelda = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dtpFechaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.btnAgregarFila = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,54 +88,6 @@ namespace WinFormsApp12
             this.button1.Text = "Form Lectura";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.AutoSize = true;
-            this.textBox1.Location = new System.Drawing.Point(79, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 15);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "Cédula";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(392, 186);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 15);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Monto";
-            // 
-            // cedula
-            // 
-            this.cedula.Location = new System.Drawing.Point(129, 183);
-            this.cedula.Name = "cedula";
-            this.cedula.Size = new System.Drawing.Size(100, 23);
-            this.cedula.TabIndex = 18;
-            // 
-            // monto
-            // 
-            this.monto.Location = new System.Drawing.Point(443, 182);
-            this.monto.Name = "monto";
-            this.monto.Size = new System.Drawing.Size(100, 23);
-            this.monto.TabIndex = 19;
-            // 
-            // cuentaEmpleado
-            // 
-            this.cuentaEmpleado.Location = new System.Drawing.Point(286, 182);
-            this.cuentaEmpleado.Name = "cuentaEmpleado";
-            this.cuentaEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.cuentaEmpleado.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(235, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 15);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Cuenta";
             // 
             // montoTotal
             // 
@@ -252,17 +198,9 @@ namespace WinFormsApp12
             this.label3.TabIndex = 57;
             this.label3.Text = "Encabezado";
             // 
-            // btnAgregarCelda
-            // 
-            this.btnAgregarCelda.Location = new System.Drawing.Point(559, 182);
-            this.btnAgregarCelda.Name = "btnAgregarCelda";
-            this.btnAgregarCelda.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarCelda.TabIndex = 72;
-            this.btnAgregarCelda.Text = "Agregar";
-            this.btnAgregarCelda.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -275,7 +213,8 @@ namespace WinFormsApp12
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Cuenta,
-            this.dataGridViewTextBoxColumn2});
+            this.dataGridViewTextBoxColumn2,
+            this.Eliminar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -284,7 +223,7 @@ namespace WinFormsApp12
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(99, 205);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -295,8 +234,9 @@ namespace WinFormsApp12
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 150);
             this.dataGridView1.TabIndex = 73;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -316,14 +256,14 @@ namespace WinFormsApp12
             this.dataGridViewTextBoxColumn2.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // btnEliminar
+            // Eliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(649, 234);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 74;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForButtonValue = true;
+            this.Eliminar.Width = 56;
             // 
             // dtpFechaRegistro
             // 
@@ -334,15 +274,24 @@ namespace WinFormsApp12
             this.dtpFechaRegistro.Size = new System.Drawing.Size(100, 23);
             this.dtpFechaRegistro.TabIndex = 75;
             // 
+            // btnAgregarFila
+            // 
+            this.btnAgregarFila.Location = new System.Drawing.Point(625, 176);
+            this.btnAgregarFila.Name = "btnAgregarFila";
+            this.btnAgregarFila.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarFila.TabIndex = 76;
+            this.btnAgregarFila.Text = "Agregar";
+            this.btnAgregarFila.UseVisualStyleBackColor = true;
+            this.btnAgregarFila.Click += new System.EventHandler(this.btnAgregarFila_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 367);
+            this.Controls.Add(this.btnAgregarFila);
             this.Controls.Add(this.dtpFechaRegistro);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnAgregarCelda);
             this.Controls.Add(this.montoTotal);
             this.Controls.Add(this.cantRegistros);
             this.Controls.Add(this.label15);
@@ -358,16 +307,10 @@ namespace WinFormsApp12
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.cuentaEmpleado);
-            this.Controls.Add(this.monto);
-            this.Controls.Add(this.cedula);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Escritura Archivo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -379,12 +322,6 @@ namespace WinFormsApp12
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label textBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox cedula;
-        private System.Windows.Forms.TextBox monto;
-        private System.Windows.Forms.TextBox cuentaEmpleado;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox montoTotal;
         private System.Windows.Forms.TextBox cantRegistros;
         private System.Windows.Forms.Label label15;
@@ -398,13 +335,13 @@ namespace WinFormsApp12
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAgregarCelda;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DateTimePicker dtpFechaRegistro;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.Button btnAgregarFila;
     }
 }
 

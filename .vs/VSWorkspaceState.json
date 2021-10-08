@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WinFormsApp12",
+    "\\WinFormsApp12\\WinFormsApp12"
   ],
-  "SelectedNode": "\\WinFormsApp12.sln",
+  "SelectedNode": "\\WinFormsApp12\\WinFormsApp12\\FrmLectura.cs",
   "PreviewInSolutionExplorer": false
 }
